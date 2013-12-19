@@ -65,7 +65,7 @@ for each polygon list and optionally reversing the order of the vertices.
 
 
 [Clipper]:      http://www.angusj.com/delphi/clipper.php
-[screenshot]:   clipper_demo.png
+[screenshot]:   screenshots/clipper_demo.png
 
 [simplify a polygon]:   http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/SimplifyPolygon.htm
 [clean a polygon]:      http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/CleanPolygon.htm
