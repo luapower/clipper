@@ -1,7 +1,8 @@
 ln -sf "$(g++ -print-file-name=libstdc++.a)"
 
-g++ -static-libgcc -shared -O3 -s -o ../../linux/bin/libclipper.so -I. -L. clipper.c \
+g++ clipper.c -static-libgcc -shared -O3 -s -o ../../bin/linux32/libclipper.so -I. -L.
 
 rm -f libstdc++.a
 
+# check that libstdc++ is not a dependency
 ldd ../../linux/bin/libclipper.so
