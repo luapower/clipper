@@ -7,7 +7,7 @@ v1.0 | Clipper 5.1.5 | LuaJIT 2
 
 ## `local clipper = require'clipper'`
 
-A Lua+C+ffi binding of [Clipper], Angus Johnson's free polygon clipping library.
+A Lua+C+ffi binding of [Clipper][clipper library], Angus Johnson's free polygon clipping library.
 
 ![screenshot]
 
@@ -64,8 +64,8 @@ for each polygon list and optionally reversing the order of the vertices.
   * `poly:get(1)` returns a pointer to the beginning of the vertex array so pointer arithmetic and memcpy are allowed on it.
 
 
-[Clipper]:      http://www.angusj.com/delphi/clipper.php
-[screenshot]:   screenshots/clipper_demo.png
+[clipper library]:      http://www.angusj.com/delphi/clipper.php
+[screenshot]:           screenshots/clipper_demo.png
 
 [simplify a polygon]:   http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/SimplifyPolygon.htm
 [clean a polygon]:      http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/CleanPolygon.htm
