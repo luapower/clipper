@@ -1,6 +1,7 @@
 ---
-project: clipper
-tagline: clipper Lua+ffi binding
+project:     clipper
+tagline:     clipper Lua+ffi binding
+category:    2D Graphics
 ---
 
 v1.0 | Clipper 5.1.5 | LuaJIT 2
