@@ -4,8 +4,6 @@ tagline:     clipper Lua+ffi binding
 category:    2D Graphics
 ---
 
-v1.0 | Clipper 5.1.5 | LuaJIT 2
-
 ## `local clipper = require'clipper'`
 
 A Lua+C+ffi binding of [Clipper][clipper library], Angus Johnson's free polygon clipping library.
