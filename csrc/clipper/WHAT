@@ -1,5 +1,4 @@
-Clipper HEAD taken 2013-05-22 from http://sourceforge.net/p/polyclipping/code/HEAD/tree/trunk/cpp/
-Clipper is from http://www.angusj.com/delphi/clipper.php (Boost License)
+Clipper HEAD-2013-05-22 from http://sourceforge.net/p/polyclipping/code/HEAD/tree/trunk/cpp/ (Boost License)
 
 clipper.c is the C wrapper I made so I can bind clipper with LuaJIT ffi.
 
