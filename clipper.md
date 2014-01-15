@@ -1,7 +1,6 @@
 ---
 project:     clipper
 tagline:     clipper Lua+ffi binding
-category:    2D Graphics
 ---
 
 ## `local clipper = require'clipper'`
