@@ -1,6 +1,6 @@
 ---
-project:     clipper
-tagline:     clipper Lua+ffi binding
+project: clipper
+tagline: polygon clipping
 ---
 
 ## `local clipper = require'clipper'`
