@@ -1,6 +1,6 @@
 ln -sf "$(g++ -print-file-name=libstdc++.a)"
 
-g++ $CXXFLAGS clipper.c -shared -o ../../bin/linux32/libclipper.so -I. -L.
+g++ -O2 -s -static-libgcc -static-libstdc++ clipper.c -shared -o ../../bin/linux32/libclipper.so -I. -L.
 
 rm -f libstdc++.a
 
