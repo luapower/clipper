@@ -1,0 +1,12 @@
+*
+!/bin/
+!/csrc/
+!/bin/mingw32/
+!/bin/linux32/
+!/media/
+
+!/clipper*
+!/bin/mingw32/clipper*
+!/bin/linux32/libclipper*
+!/csrc/clipper/
+!/csrc/clipper/**
