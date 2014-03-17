@@ -1,5 +1,6 @@
 //go@ bash build-mingw32.sh
 //Clipper C wrapper by Cosmin Apreutesei (public domain)
+#include <stdint.h>
 #include "clipper.cpp"
 
 using namespace ClipperLib;
@@ -7,7 +8,7 @@ using namespace ClipperLib;
 #ifdef __MINGW32__
 #define export extern "C" __declspec (dllexport)
 #else
-#define export extern "C" 
+#define export extern "C"
 #endif
 
 // clipper_polygon class
