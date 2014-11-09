@@ -1,4 +1,3 @@
-//go@ bash build-mingw32.sh
 //Clipper C wrapper by Cosmin Apreutesei (public domain)
 #include <stdint.h>
 #include "clipper.cpp"
@@ -158,11 +157,11 @@ export void clipper_free(Clipper* clipper) {
 }
 
 export int clipper_add_polygon(Clipper* clipper, Polygon* poly, PolyType poly_type) {
-	clipper->AddPolygon(*poly, PolyType(poly_type));
+	return clipper->AddPolygon(*poly, PolyType(poly_type));
 }
 
 export int clipper_add_polygons(Clipper* clipper, Polygons* poly, PolyType poly_type) {
-	clipper->AddPolygons(*poly, PolyType(poly_type));
+	return clipper->AddPolygons(*poly, PolyType(poly_type));
 }
 
 export void clipper_get_bounds(Clipper* clipper, IntRect* out) {

@@ -1,1 +1,3 @@
-g++ -arch i386 -mmacosx-version-min=10.4 -O2 clipper.c -shared -install_name @loader_path/libclipper.dylib -o ../../bin/osx32/libclipper.dylib -I. -L.
+P=osx32 C="-arch i386 -mmacosx-version-min=10.4" \
+	L="-arch i386 -install_name @loader_path/libclipper.dylib -mmacosx-version-min=10.4" \
+	D=libclipper.dylib A=libclipper.a ./build.sh

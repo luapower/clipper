@@ -1,1 +1,2 @@
-g++ -O2 -s -static -static-libgcc -static-libstdc++ clipper.c -shared -o ../../bin/mingw64/clipper.dll -I. -L.
+P=mingw64 L="-s -static-libgcc -static-libstdc++" \
+	D=clipper.dll A=clipper.a ./build.sh

@@ -199,9 +199,9 @@ end
 
 local function clipper_add(self, poly, where_flag)
 	if is_polygon(poly) then
-		C.clipper_add_polygon(self, poly, where_flag)
+		assert(C.clipper_add_polygon(self, poly, where_flag) ~= 0)
 	else
-		C.clipper_add_polygons(self, poly, where_flag)
+		assert(C.clipper_add_polygons(self, poly, where_flag) ~= 0)
 	end
 end
 

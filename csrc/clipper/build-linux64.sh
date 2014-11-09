@@ -1,1 +1,2 @@
-g++ -O2 -s -static-libgcc -static-libstdc++ -fPIC clipper.c -shared -o ../../bin/linux64/libclipper.so -I. -L.
+P=linux64 C=-fPIC L="-s -static-libgcc -static-libstdc++" \
+	D=libclipper.so A=libclipper.a ./build.sh
