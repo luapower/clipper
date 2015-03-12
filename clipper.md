@@ -15,6 +15,8 @@ A Lua+C+ffi binding of [Clipper][clipper library], Angus Johnson's free polygon 
   * polygon simplificaion with `even_odd`, `non_zero`, `positive` and `negative` fill types
   * polygon offsetting with `square`, `round` and `miter` join types
 
+## API
+
 ---------------------------------------------------------------------------- --------------------------------------------------------
 `clipper.polygon([n]) -> poly`                                               create a polygon object of size `n` (default 0)
 `poly:size() -> n`                                                           number of vertices
