@@ -1,3 +1,3 @@
 P=osx64 C="-arch x86_64 -mmacosx-version-min=10.4" \
-	L="-arch x86_64 -install_name @loader_path/libclipper.dylib -mmacosx-version-min=10.4" \
+	L="-arch x86_64 -install_name @rpath/libclipper.dylib -mmacosx-version-min=10.4" \
 	D=libclipper.dylib A=libclipper.a ./build.sh
