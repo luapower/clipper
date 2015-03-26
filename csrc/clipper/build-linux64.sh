@@ -1,2 +1,1 @@
-P=linux64 C=-fPIC L="-s -static-libgcc -static-libstdc++" \
-	D=libclipper.so A=libclipper.a ./build.sh
+P=linux64 C=-fPIC L="-s" D=libclipper.so A=libclipper.a ./build.sh

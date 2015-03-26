@@ -1,2 +1,1 @@
-P=linux32 L="-s -static-libgcc -static-libstdc++" \
-	D=libclipper.so A=libclipper.a ./build.sh
+P=linux32 L="-s" D=libclipper.so A=libclipper.a ./build.sh
