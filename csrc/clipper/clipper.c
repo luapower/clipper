@@ -5,9 +5,9 @@
 using namespace ClipperLib;
 
 #ifdef __MINGW32__
-#define export extern "C" __declspec (dllexport)
+	#define export extern "C" __declspec (dllexport)
 #else
-#define export extern "C"
+	#define export extern "C" __attribute__ ((visibility ("default")))
 #endif
 
 // clipper_polygon class

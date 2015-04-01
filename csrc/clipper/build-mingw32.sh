@@ -1,1 +1,1 @@
-P=mingw32 L=-s D=clipper.dll A=clipper.a ./build.sh
+P=mingw32 L="-s -static" D=clipper.dll A=clipper.a ./build.sh

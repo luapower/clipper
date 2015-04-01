@@ -1,7 +1,8 @@
 local ffi = require'ffi'
 local C = ffi.load'clipper'
 
-if not rawget(_G, '__CLIPPER__') then
+if not ... then require'clipper_demo'; return end
+
 ffi.cdef[[
 typedef struct clipper_point_st { int64_t x, y; } clipper_point;
 typedef struct clipper_rect_st { int64_t x1, y1, x2, y2; } clipper_rect;
@@ -69,7 +70,6 @@ void              clipper_clear        (clipper*);
 int               clipper_get_reverse_solution (clipper*);
 void              clipper_set_reverse_solution (clipper*, int);
 ]]
-end
 
 local fill_types = {
 	even_odd = C.clipper_pftEvenOdd,
@@ -225,15 +225,9 @@ end
 
 clipper.clear = C.clipper_clear
 
-if not rawget(_G, '__CLIPPER__') then
 ffi.metatype('clipper_polygon', {__index = polygon})
 ffi.metatype('clipper_polygons', {__index = polygons})
 ffi.metatype('clipper', {__index = clipper})
-end
-
-_G.__CLIPPER__ = true
-
-if not ... then require'clipper_demo' end
 
 return {
 	new = clipper.new,
