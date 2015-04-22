@@ -23,7 +23,7 @@ A Lua+C+ffi binding of [Clipper][clipper library], Angus Johnson's free polygon 
 `poly:add(x, y)`                                                             add a vertex to the polygon
 `poly:get(i).x -> n` <br> `poly:get(i).y -> n`                               get vertex coordinates
 `poly:get(i).x = n` <br> `poly:get(i).y = n`                                 set vertex coordinates
-`poly:simplify(['even_odd'|'non_zero'|'positive'|'negative']) -> polys`      [simplify a polygon]
+`poly:simplify([rule]) -> polys`                                             [simplify a polygon] (rule can be 'even_odd', 'non_zero', 'positive', 'negative')
 `poly:clean([distance]) -> polys`                                            [clean a polygon]
 `poly:reverse()`                                                             reverse the order (and hence orientation) of vertices
 `poly:orientation() -> true | false`                                         polygon orientation (true = clockwise)
@@ -34,10 +34,10 @@ A Lua+C+ffi binding of [Clipper][clipper library], Angus Johnson's free polygon 
 `polys:add(poly)`                                                            add a polygon to the end of the list
 `polys:get(i) -> poly`                                                       get a polygon from the list
 `polys:set(i, poly)`                                                         set a polygon in the list
-`polys:simplify(['even_odd'|'non_zero'|'positive'|'negative']) -> polys`     [simplify polygons] (default is `'even_odd'`)
+`polys:simplify([rule]) -> polys`                                            [simplify polygons] (default rule is `'even_odd'`)
 `polys:clean([distance]) -> polys`                                           [clean polygons] (default distance is `~= sqrt(2)`)
 `polys:reverse()`                                                            reverse the order (and hence orientation) of vertices
-`polys:offset(delta, ['square'|'round'|'miter'], [limit]) -> polys`          offset polygons (default is 'square', 0)
+`polys:offset(delta, [join_type], [limit]) -> polys`                         offset polygons (join type can be 'square' (default), 'round', 'miter'; default limit is 0)
 **Clipping**
 `clipper.new() -> cl`                                                        create a clipper object
 `cl:add_subject(poly | polys)`                                               add polygons to be clipped
@@ -65,10 +65,10 @@ for each polygon list and optionally reversing the order of the vertices.
 
 
 [clipper library]:      http://www.angusj.com/delphi/clipper.php
-[screenshot]:           screenshots/clipper_demo.png
+[screenshot]:           /files/media/www/clipper_demo.png
 
-[simplify a polygon]:   http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/SimplifyPolygon.htm
-[clean a polygon]:      http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/CleanPolygon.htm
-[simplify polygons]:    http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/SimplifyPolygons.htm
-[clean polygons]:       http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Routines/CleanPolygons.htm
+[simplify a polygon]:   http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Functions/SimplifyPolygon.htm
+[clean a polygon]:      http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Functions/CleanPolygon.htm
+[simplify polygons]:    http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Functions/SimplifyPolygons.htm
+[clean polygons]:       http://www.angusj.com/delphi/clipper/documentation/Docs/Units/ClipperLib/Functions/CleanPolygons.htm
 
