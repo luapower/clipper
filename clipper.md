@@ -1,5 +1,4 @@
 ---
-project: clipper
 tagline: polygon clipping
 ---
 
